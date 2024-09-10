@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnCloud Infotech Pvt Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel > div {
+            flex: 0 0 auto;
+            width: 100%;
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-white">
+    <header class="sticky top-0 z-50 w-full border-b border-blue-200 bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-cloud text-blue-600"></i>
+                <span class="text-xl font-bold text-blue-900">OnCloud Infotech</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-sm font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="#services" class="text-sm font-medium hover:text-blue-600 transition-colors">Services</a>
+                <a href="#about" class="text-sm font-medium hover:text-blue-600 transition-colors">About</a>
+                <a href="#clients" class="text-sm font-medium hover:text-blue-600 transition-colors">Clients</a>
+                <a href="#contact" class="text-sm font-medium hover:text-blue-600 transition-colors">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-blue-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <button class="hidden md:inline-flex bg-blue-600 text-white hover:bg-blue-700 transition-colors px-4 py-2 rounded">Get Started</button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-blue-200 py-4">
+            <div class="container mx-auto flex flex-col space-y-4 px-4">
+                <a href="#home" class="text-sm font-medium hover:text-blue-600 transition-colors">Home</a>
+                <a href="#services" class="text-sm font-medium hover:text-blue-600 transition-colors">Services</a>
+                <a href="#about" class="text-sm font-medium hover:text-blue-600 transition-colors">About</a>
+                <a href="#clients" class="text-sm font-medium hover:text-blue-600 transition-colors">Clients</a>
+                <a href="#contact" class="text-sm font-medium hover:text-blue-600 transition-colors">Contact</a>
+                <button class="bg-blue-600 text-white hover:bg-blue-700 transition-colors w-full py-2 rounded">Get Started</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <section id="home" class="w-full py-12 md:py-24 lg:py-32 bg-blue-50 overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6 relative">
+                <div class="flex flex-col items-center space-y-4 text-center">
+                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-blue-900">
+                        Welcome to OnCloud Infotech
+                    </h1>
+                    <p class="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+                        Your one-stop solution for Mobile & Web Application Development,ERP Applications, No Code platforms, Digital Marketing, Data Analysis, and
+                        Business Analysis.
+                    </p>
+                    <button class="bg-blue-600 text-white hover:bg-blue-700 transition-colors px-4 py-2 rounded">Learn More</button>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Team collaboration" class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Data analysis" class="rounded-lg shadow-md w-full h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Mobile app development" class="rounded-lg shadow-md w-full h-64 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-900">
+                    Our Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">Mobile App Development</h3>
+                        <p class="mt-2 text-gray-700">Create powerful, user-friendly mobile applications for iOS and Android platforms.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">Web App Development</h3>
+                        <p class="mt-2 text-gray-700">Build responsive and scalable web applications using cutting-edge technologies.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">ERP Applications</h3>
+                        <p class="mt-2 text-gray-700">Implement and customize Enterprise Resource Planning solutions for your business needs.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-cubes text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">No Code Platforms</h3>
+                        <p class="mt-2 text-gray-700">Develop applications quickly without extensive coding using our no-code platform solutions.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-bullhorn text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">Digital Marketing</h3>
+                        <p class="mt-2 text-gray-700">Boost your online presence with our comprehensive digital marketing strategies.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-chart-bar text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">Data Analysis</h3>
+                        <p class="mt-2 text-gray-700">Unlock insights from your data to make informed business decisions.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <i class="fas fa-chart-pie text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-blue-900">Business Analysis</h3>
+                        <p class="mt-2 text-gray-700">Optimize your business processes and improve overall efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="w-full py-12 md:py-24 lg:py-32 bg-blue-50 relative overflow-hidden" style="perspective: 1000px;">
+            <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80'); filter: blur(5px);"></div>
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-900">
+                    About Us
+                </h2>
+                <p class="mx-auto max-w-[800px] text-center text-gray-700 md:text-xl bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm p-6 rounded-lg shadow-lg">
+                    OnCloud Infotech Pvt Ltd is a leading technology company specializing in innovative solutions for
+                    businesses of all sizes. With our team of expert developers, marketers, and analysts, we help our clients
+                    navigate the digital landscape and achieve their goals.
+                </p>
+            </div>
+        </section>
+
+        <section id="clients" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-900">
+                    Our Clients
+                </h2>
+                <div class="carousel max-w-4xl mx-auto">
+                    <div class="flex justify-center items-center h-32">
+                        <img src="/placeholder-logo.svg" alt="Client 1" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center h-32">
+                        <img src="/placeholder-logo.svg" alt="Client 2" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center h-32">
+                        <img src="/placeholder-logo.svg" alt="Client 3" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center h-32">
+                        <img src="/placeholder-logo.svg" alt="Client 4" class="h-16">
+                    </div>
+                    <div class="flex justify-center items-center h-32">
+                        <img src="/placeholder-logo.svg" alt="Client 5" class="h-16">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container mx-auto px-4 md:px-6">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-blue-900">
+                    Contact Us
+                </h2>
+                <form class="mx-auto max-w-[600px] space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    <input type="email" placeholder="Your Email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    <textarea placeholder="Your Message" class="w-full px-3 py-2 border border-gray-300 rounded-md" rows="4"></textarea>
+                    <button type="submit" class="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors px-4 py-2 rounded">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-6 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="footer-logos flex justify-between">
+                <p>Registered under:</p>
+                <div class="logo-container flex space-x-4">
+                
+                    <img src=".\assets\ksum.png" alt="Kerala Startup Mission Logo" class="footer-logo w-15 h-14">
+                    <img src=".\assets\SI.png" alt="Startup India Logo" class="footer-logo w-15 h-10">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <p>&copy; 2024 OnCloud Infotech Pvt Ltd. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-200 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-200 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
